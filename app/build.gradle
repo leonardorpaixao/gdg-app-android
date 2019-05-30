@@ -56,11 +56,14 @@ dependencies {
     implementation Dependencies.aacLifecycleJava8
     implementation Dependencies.material
     implementation Dependencies.firebaseDataBase
-
+    implementation Dependencies.firebaseAuth
+    implementation Dependencies.googleAuth
     implementation Dependencies.picasso
 
     testImplementation DependenciesTest.junit4
     androidTestImplementation DependenciesTest.androidRunner
     androidTestImplementation DependenciesTest.espressoCore
+
+
 }
 apply plugin: 'com.google.gms.google-services'

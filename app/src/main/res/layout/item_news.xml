@@ -93,10 +93,8 @@
                   android:gravity="start|bottom"
                   tools:text="09:00 - 17:00"
 
-
         />
     </RelativeLayout>
-
 
 
 </com.google.android.material.card.MaterialCardView>

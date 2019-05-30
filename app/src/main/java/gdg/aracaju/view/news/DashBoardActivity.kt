@@ -15,7 +15,7 @@ import gdg.aracaju.news.R
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.error_state_layout.*
 
-internal class MainActivity : AppCompatActivity() {
+internal class DashBoardActivity : AppCompatActivity() {
 
     private val service by lazy { EventsRepository() }
     private val viewModel by lazy {

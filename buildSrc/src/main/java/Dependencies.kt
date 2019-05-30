@@ -12,7 +12,8 @@ object Versions {
     const val lifecycle = "2.0.0"
 
     const val picasso = "2.71828"
-
+    const val firebaseAuth = "16.2.1"
+    const val googleAuth = "16.0.1"
 }
 
 object Dependencies {
@@ -31,6 +32,7 @@ object Dependencies {
 
     const val firebaseCore = "com.google.firebase:firebase-core:${Versions.firebaseCore}"
     const val firebaseDataBase = "com.google.firebase:firebase-database:${Versions.firebaseDatabase}"
+    const val firebaseAuth = "com.google.firebase:firebase-auth:${Versions.firebaseAuth}"
 
     const val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutine}"
     const val coroutineAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutine}"
@@ -40,6 +42,8 @@ object Dependencies {
     const val groupieKotlin = "com.xwray:groupie-kotlin-android-extensions:${Versions.groupie}"
     const val aacLifecycleJava8 = "androidx.lifecycle:lifecycle-common-java8:${Versions.lifecycle}"
     const val picasso = "com.squareup.picasso:picasso:${Versions.picasso}"
+
+    const val googleAuth = "com.google.android.gms:play-services-auth:${Versions.googleAuth}"
 
 }
 

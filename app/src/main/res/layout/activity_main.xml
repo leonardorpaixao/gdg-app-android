@@ -1,36 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
         android:background="#FFFFFF">
-
 
     <androidx.appcompat.widget.Toolbar
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:id="@+id/toolBarMainActivity"
             android:minHeight="?attr/actionBarSize"
-            app:title="GDG Aju Eventos"
+            app:title="@string/app_title"
             android:background="?attr/colorPrimary"
             android:elevation="4dp"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
     />
 
     <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@id/toolBarMainActivity"
             android:id="@+id/eventsRv"
+            android:layout_marginTop="?attr/actionBarSize"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_below="@+id/toolBarMainActivity"
-            android:background="#FFFFFF"
-            android:visibility="gone"/>
-
+            android:layout_marginBottom="?attr/actionBarSize"/>
 
     <ProgressBar style="?android:attr/progressBarStyle"
                  android:id="@+id/loadingStateView"
@@ -42,11 +37,24 @@
 
     <include layout="@layout/empty_state_layout"
              android:visibility="gone"
-             android:id="@+id/emptyStateView"/>
+             app:layout_behavior="@string/appbar_scrolling_view_behavior"
+             android:id="@+id/emptyStateView"
+    />
 
     <include layout="@layout/error_state_layout"
              android:visibility="gone"
+             app:layout_behavior="@string/appbar_scrolling_view_behavior"
              android:id="@+id/errorStateView"/>
 
+    <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:navigationIcon="@drawable/ic_menu"
+            app:backgroundTint="@color/colorPrimary"
+            app:hideOnScroll="true"
+            app:fabAlignmentMode="end"
+    />
 
-</RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

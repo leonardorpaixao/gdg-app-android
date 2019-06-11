@@ -1,12 +1,21 @@
 package gdg.aracaju.data.api.events
 
-internal data class EventsResponse(
+import androidx.annotation.Keep
 
-    val name: String,
-    val id_details: Int,
+@Keep
+internal data class EventsResponse(
     val date: String,
+    val id_details: Int,
     val img: String,
-    val time: String
+    val name: String,
+    val time: TimeResponse
+
 ) {
-    constructor() : this("", 0, "", "", "")
+    constructor() : this("", 0, "", "", TimeResponse())
 }
+
+@Keep
+internal data class TimeResponse(
+    val start: String = "",
+    val end: String = ""
+)

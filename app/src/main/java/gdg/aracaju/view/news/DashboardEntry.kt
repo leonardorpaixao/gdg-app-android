@@ -12,8 +12,6 @@ internal class DashboardEntry(private val event: Event, private val onClick: () 
     override fun getLayout() = R.layout.item_news
 
     override fun bind(viewHolder: ViewHolder, position: Int) {
-
-
         viewHolder.itemView.titleEvent.text = event.nameEvent
         viewHolder.itemView.eventDate.text = event.date
         viewHolder.itemView.eventTime.text = "${event.time.start} - ${event.time.end}"
